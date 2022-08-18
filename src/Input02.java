@@ -1,31 +1,36 @@
+import org.w3c.dom.ls.LSOutput;
+
 import javax.swing.JOptionPane;
 
 public class Input02 {
     public static void main(String[] args) {
 
         JOptionPane.showMessageDialog(null,
-                "There's no input here, just a message",
-                "Title",
+                "You're about to take a quick survey",
+                "Alert",
                 0);
 
 
-        String input1 = (String)JOptionPane.showInputDialog(null,
-                "Is this a question?",
-                "Dialog Title",
-                2,
+        String userName = (String)JOptionPane.showInputDialog(null,
+                "What is your name",
+                "Name Prompt",
+                1,
                 null,
                 null,
-                "Type something here.");
+                "Your name here.");
 
 
-        String[] acceptableValues = {"Choice 1", "Choice 2", "Choice 3"};
-        String input2 = (String)JOptionPane.showInputDialog(null,
-                "Is this a question?",
-                "Dialog Title",
+        String[] acceptableValues = {"Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Brown", "Grey", "Black", "White", "Teal", "Pink", };
+        String colorChoice = (String)JOptionPane.showInputDialog(null,
+                "What is your favorite color?",
+                "Color Select",
                 2,
                 null,
                 acceptableValues,
-                acceptableValues[1]);
+                acceptableValues[0]);
+        System.out.println("Name: "+ userName);
+        System.out.println("Favorite Color: " + colorChoice);
 
     }
+
 }
